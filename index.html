@@ -129,6 +129,39 @@
       font-weight: 700;
     }
 
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+      margin-left: 36px;
+    }
+
+    .contact-links a,
+    .site-footer a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .contact-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid #dce6f5;
+      border-radius: 999px;
+      padding: 8px 14px;
+      color: #0d2c55;
+      background: #ffffff;
+      font-size: 0.9rem;
+      font-weight: 800;
+      box-shadow: 0 8px 18px rgba(13, 44, 85, 0.06);
+    }
+
+    .contact-links a:hover,
+    .site-footer a:hover {
+      color: var(--blue);
+    }
+
     .feature-list {
       display: grid;
       gap: 21px;
@@ -596,7 +629,8 @@
       }
 
       .intro,
-      .former {
+      .former,
+      .contact-links {
         margin-left: 0;
       }
 
@@ -608,6 +642,10 @@
         display: flex;
         justify-content: center;
         text-align: center;
+      }
+
+      .contact-links {
+        justify-content: center;
       }
 
       .feature-list {
@@ -655,6 +693,16 @@
 
       .former {
         width: 100%;
+        border-radius: 16px;
+      }
+
+      .contact-links {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .contact-links a {
+        justify-content: center;
         border-radius: 16px;
       }
 
@@ -814,6 +862,10 @@
             delivering code-compliant designs with speed, accuracy, and confidence.
           </p>
           <div class="former">SprinkSnap Inc. &mdash; formerly FireAcad Inc.</div>
+          <div class="contact-links" aria-label="SprinkSnap contact information">
+            <a href="tel:+15198047878">Phone: 519-804-7878</a>
+            <a href="mailto:info@sprinksnap.com">Email: info@sprinksnap.com</a>
+          </div>
         </div>
 
         <ul class="feature-list" aria-label="Core SprinkSnap features">
@@ -939,7 +991,9 @@
         <div class="bottom-line">FASTER DESIGNS. FEWER ERRORS. <span>BETTER SYSTEMS.</span></div>
       </div>
       <footer class="site-footer">
-        Coming soon from SprinkSnap Inc. Formerly FireAcad Inc.
+        Coming soon from SprinkSnap Inc. Formerly FireAcad Inc. |
+        <a href="tel:+15198047878">519-804-7878</a> |
+        <a href="mailto:info@sprinksnap.com">info@sprinksnap.com</a>
       </footer>
     </section>
   </main>
