@@ -22,11 +22,21 @@
       box-sizing: border-box;
     }
 
+    html {
+      overflow-x: hidden;
+    }
+
     body {
       margin: 0;
       color: var(--text);
       background: #ffffff;
       font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.4;
+      overflow-x: hidden;
+    }
+
+    svg {
+      max-width: 100%;
     }
 
     .page {
@@ -55,6 +65,10 @@
       align-items: center;
     }
 
+    .logo-lockup > div {
+      min-width: 0;
+    }
+
     .sprinkler-mark {
       width: 112px;
       height: 112px;
@@ -62,10 +76,11 @@
 
     .wordmark {
       margin: 0;
-      font-size: clamp(3.2rem, 8vw, 5.7rem);
+      font-size: clamp(2.4rem, 8vw, 5.7rem);
       line-height: 0.9;
       letter-spacing: -0.075em;
       font-weight: 900;
+      white-space: nowrap;
     }
 
     .wordmark span:first-child {
@@ -127,6 +142,7 @@
       grid-template-columns: 38px 1fr;
       gap: 14px;
       align-items: start;
+      min-width: 0;
     }
 
     .feature-icon {
@@ -251,6 +267,7 @@
       grid-template-columns: auto 1fr;
       gap: 30px;
       align-items: center;
+      min-width: 0;
     }
 
     .laptop {
@@ -263,6 +280,7 @@
       border-radius: 15px 15px 6px 6px;
       background: #0b1017;
       box-shadow: 0 22px 38px rgba(0, 0, 0, 0.45);
+      min-width: 0;
     }
 
     .laptop::after {
@@ -380,6 +398,7 @@
       display: grid;
       justify-items: center;
       gap: 11px;
+      align-items: center;
       text-align: center;
     }
 
@@ -439,10 +458,22 @@
     }
 
     @media (max-width: 980px) {
+      .page {
+        background: #ffffff;
+      }
+
       .hero-grid,
       .showcase-inner,
       .visual-wrap {
         grid-template-columns: 1fr;
+      }
+
+      .hero-grid {
+        align-items: start;
+      }
+
+      .showcase-inner {
+        padding: 42px 34px 22px;
       }
 
       .feature-list {
@@ -455,6 +486,92 @@
 
       .revit-card {
         grid-row: auto;
+        grid-template-columns: auto auto minmax(0, 1fr);
+        justify-items: start;
+        max-width: 520px;
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      .revit-card p {
+        margin-top: 0;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .hero {
+        padding: 42px 24px 32px;
+      }
+
+      .logo-lockup {
+        grid-template-columns: 88px minmax(0, 1fr);
+        gap: 14px;
+      }
+
+      .sprinkler-mark {
+        width: 88px;
+        height: 88px;
+      }
+
+      .tagline {
+        margin-top: 10px;
+        letter-spacing: 0.14em;
+      }
+
+      .intro {
+        margin-top: 24px;
+        font-size: 1rem;
+      }
+
+      .feature {
+        border: 1px solid #e5edf8;
+        border-radius: 16px;
+        padding: 14px;
+        background: #f8fbff;
+      }
+
+      .showcase-inner {
+        gap: 34px;
+        padding: 38px 24px 22px;
+      }
+
+      .product-panel {
+        grid-template-columns: 92px 1fr;
+        gap: 16px;
+      }
+
+      .app-icon {
+        width: 92px;
+        height: 92px;
+        border-radius: 18px;
+      }
+
+      .mini-logo {
+        width: 70px;
+        height: 70px;
+      }
+
+      .steps {
+        margin-top: 34px;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 22px;
+      }
+
+      .platform-pill {
+        font-size: 0.78rem;
+      }
+
+      .laptop {
+        width: min(100%, 540px);
+        padding: 9px 9px 18px;
+        border-width: 2px;
+      }
+
+      .laptop::after {
+        right: -18px;
+        left: -18px;
+        bottom: -17px;
+        height: 17px;
       }
     }
 
@@ -469,9 +586,37 @@
         grid-template-columns: 1fr;
       }
 
+      .logo-lockup {
+        justify-items: center;
+        text-align: center;
+      }
+
+      .wordmark {
+        font-size: clamp(2.45rem, 14vw, 4rem);
+      }
+
       .intro,
       .former {
         margin-left: 0;
+      }
+
+      .intro {
+        text-align: center;
+      }
+
+      .former {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .feature-list {
+        gap: 12px;
+      }
+
+      .product-panel {
+        justify-items: center;
+        text-align: center;
       }
 
       .steps {
@@ -481,6 +626,161 @@
       .platform-pill,
       .bottom-line {
         letter-spacing: 0.14em;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 30px 16px 24px;
+      }
+
+      .wordmark {
+        font-size: clamp(2.05rem, 13vw, 3.1rem);
+        letter-spacing: -0.085em;
+      }
+
+      .registered {
+        margin-left: 2px;
+      }
+
+      .tagline {
+        margin-left: 0;
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+      }
+
+      .intro {
+        font-size: 0.96rem;
+      }
+
+      .former {
+        width: 100%;
+        border-radius: 16px;
+      }
+
+      .feature {
+        grid-template-columns: 32px 1fr;
+        gap: 11px;
+        padding: 12px;
+      }
+
+      .feature-icon {
+        width: 30px;
+        height: 30px;
+      }
+
+      .feature-title {
+        font-size: 0.84rem;
+      }
+
+      .feature p {
+        font-size: 0.78rem;
+      }
+
+      .showcase-inner {
+        padding: 32px 16px 20px;
+      }
+
+      .product-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .product-panel h2 {
+        font-size: 1.48rem;
+      }
+
+      .steps {
+        gap: 18px 10px;
+      }
+
+      .step svg {
+        width: 32px;
+        height: 32px;
+      }
+
+      .platform-pill {
+        padding: 9px 12px;
+        font-size: 0.7rem;
+        letter-spacing: 0.1em;
+      }
+
+      .screen {
+        aspect-ratio: 4 / 3;
+        font-size: 0.52rem;
+      }
+
+      .app-bar {
+        gap: 10px;
+        height: 23px;
+        overflow: hidden;
+        padding: 0 8px;
+        white-space: nowrap;
+      }
+
+      .app-bar span:nth-child(n+4) {
+        display: none;
+      }
+
+      .screen-grid {
+        height: calc(100% - 23px);
+        grid-template-columns: 54px 1fr 90px;
+      }
+
+      .side-nav {
+        gap: 5px;
+        padding: 8px 5px;
+      }
+
+      .side-nav span {
+        padding: 4px 5px;
+      }
+
+      .summary {
+        gap: 5px;
+        padding: 8px 6px;
+      }
+
+      .summary h3,
+      .metric,
+      .calcs {
+        font-size: 0.44rem;
+      }
+
+      .calcs th,
+      .calcs td {
+        padding: 3px 2px;
+      }
+
+      .revit-card {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+      }
+
+      .bottom-line {
+        font-size: 0.7rem;
+        line-height: 1.7;
+        letter-spacing: 0.09em;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .wordmark {
+        font-size: 1.92rem;
+      }
+
+      .tagline {
+        font-size: 0.66rem;
+        letter-spacing: 0.07em;
+      }
+
+      .screen-grid {
+        grid-template-columns: 48px 1fr 78px;
+      }
+
+      .side-nav,
+      .summary {
+        font-size: 0.42rem;
       }
     }
   </style>
