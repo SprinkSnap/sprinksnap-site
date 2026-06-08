@@ -37,6 +37,7 @@
 
     html {
       scroll-behavior: smooth;
+      overflow-x: hidden;
     }
 
     body {
@@ -45,6 +46,7 @@
       background: #ffffff;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
       line-height: 1.5;
+      overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
@@ -124,6 +126,15 @@
 
     .brand-word span {
       color: var(--blue);
+    }
+
+    .logo-reg {
+      position: relative;
+      top: -0.55em;
+      margin-left: 2px;
+      color: var(--navy);
+      font-size: 0.18em;
+      letter-spacing: 0;
     }
 
     .brand-tagline {
@@ -639,6 +650,12 @@
       color: var(--navy);
     }
 
+    .status-ok {
+      color: #16a34a;
+      font-weight: 950;
+      text-transform: uppercase;
+    }
+
     .features-grid,
     .faq-grid {
       display: grid;
@@ -789,6 +806,28 @@
       white-space: nowrap;
     }
 
+    .scroll-top {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 30;
+      display: grid;
+      width: 48px;
+      height: 48px;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 999px;
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--blue), var(--blue-700));
+      box-shadow: 0 18px 38px rgba(0, 26, 61, 0.28);
+      text-decoration: none;
+    }
+
+    .scroll-top svg {
+      width: 22px;
+      height: 22px;
+    }
+
     @media (max-width: 1040px) {
       .benefits,
       .workflow {
@@ -828,6 +867,14 @@
 
       .mockup-grid {
         grid-template-columns: 76px 1fr;
+      }
+
+      .mockup-bar {
+        overflow: hidden;
+      }
+
+      .mockup-bar span:nth-child(n+5) {
+        display: none;
       }
 
       .mockup-panel {
@@ -903,6 +950,11 @@
         border-radius: 20px;
       }
 
+      .mockup::after {
+        right: 0;
+        left: 0;
+      }
+
       .mockup-grid {
         grid-template-columns: 1fr;
         min-height: 260px;
@@ -910,6 +962,105 @@
 
       .mockup-side {
         display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nav {
+        gap: 12px;
+      }
+
+      .brand {
+        grid-template-columns: 38px auto;
+        gap: 8px;
+        min-width: 0;
+      }
+
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+      }
+
+      .brand-word {
+        font-size: 1.18rem;
+      }
+
+      .hero {
+        padding-top: 34px;
+      }
+
+      .brand-logo {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+      }
+
+      .brand-logo svg {
+        width: 82px;
+        height: 82px;
+      }
+
+      .logo-word {
+        font-size: clamp(2rem, 13vw, 3rem);
+      }
+
+      .logo-tagline {
+        font-size: 0.68rem;
+        letter-spacing: 0.08em;
+      }
+
+      .eyebrow {
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+      }
+
+      .mockup {
+        margin-right: -10px;
+        margin-left: -10px;
+        padding: 0 0 24px;
+      }
+
+      .mockup-window {
+        border-width: 2px;
+        border-radius: 14px 14px 6px 6px;
+        padding: 7px;
+      }
+
+      .mockup-bar {
+        gap: 10px;
+        padding: 8px;
+        font-size: 0.5rem;
+      }
+
+      .mockup-bar span:nth-child(n+4) {
+        display: none;
+      }
+
+      .mockup-canvas {
+        min-height: 260px;
+      }
+
+      .scroll-top {
+        right: 14px;
+        bottom: 14px;
+        width: 42px;
+        height: 42px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .brand-word {
+        font-size: 1.05rem;
+      }
+
+      .header-cta {
+        padding: 0 10px;
+        font-size: 0.78rem;
+      }
+
+      .logo-word {
+        font-size: 1.9rem;
       }
     }
   </style>
@@ -954,7 +1105,7 @@
           <g fill="#005bff"><circle cx="29" cy="99" r="3"/><circle cx="39" cy="106" r="3"/><circle cx="50" cy="112" r="3"/><circle cx="61" cy="115" r="3"/><circle cx="72" cy="112" r="3"/><circle cx="83" cy="106" r="3"/><circle cx="93" cy="99" r="3"/></g>
         </svg>
         <span>
-          <span class="brand-word">Sprink<span>Snap</span></span>
+          <span class="brand-word">Sprink<span>Snap</span><sup class="logo-reg">&reg;</sup></span>
           <span class="brand-tagline">Smarter Design. Code Confident.</span>
         </span>
       </a>
@@ -992,7 +1143,7 @@
               <g fill="#005bff"><circle cx="29" cy="99" r="3"/><circle cx="39" cy="106" r="3"/><circle cx="50" cy="112" r="3"/><circle cx="61" cy="115" r="3"/><circle cx="72" cy="112" r="3"/><circle cx="83" cy="106" r="3"/><circle cx="93" cy="99" r="3"/></g>
             </svg>
             <span>
-              <span class="logo-word">Sprink<span>Snap</span></span>
+              <span class="logo-word">Sprink<span>Snap</span><sup class="logo-reg">&reg;</sup></span>
               <span class="logo-tagline">Smarter Design. Code Confident.</span>
             </span>
           </div>
@@ -1127,12 +1278,36 @@
               <div class="mockup-grid">
                 <div class="mockup-side"><span>Project</span><span>System</span><span>Layout</span><span>Hydraulics</span><span>Analysis</span><span>BOM</span><span>Reports</span></div>
                 <div class="mockup-canvas">
-                  <svg viewBox="0 0 420 300" preserveAspectRatio="none" aria-hidden="true">
-                    <path d="M55 95 205 45 355 96 354 220 205 264 56 219Z" fill="rgba(255,255,255,.46)" stroke="#94a3b8" stroke-width="3"/>
-                    <path d="M56 96h298M56 135h298M56 176h298M56 219h298M105 78v160M158 60v190M205 45v219M255 62v188M306 78v160" stroke="#cbd5e1" stroke-width="2"/>
-                    <path d="M42 120h300M80 157h260M65 197h300M125 83v132M230 62v164M320 106v113" stroke="#005bff" stroke-width="4" fill="none"/>
-                    <path d="M105 72h142M182 106h178M58 185h190M148 232h182" stroke="#e53935" stroke-width="3" fill="none"/>
-                    <g fill="#005bff"><circle cx="105" cy="120" r="6"/><circle cx="182" cy="157" r="6"/><circle cx="230" cy="197" r="6"/><circle cx="320" cy="232" r="6"/></g>
+                  <svg viewBox="0 0 420 300" preserveAspectRatio="none" aria-labelledby="mockup-title mockup-desc" role="img">
+                    <title id="mockup-title">Revit sprinkler layout automation preview</title>
+                    <desc id="mockup-desc">A Revit-style fire sprinkler plan with sprinkler heads, branch lines, main piping, NFPA 13 spacing labels, and hydraulic calculation nodes.</desc>
+                    <rect x="24" y="28" width="372" height="238" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="3"/>
+                    <path d="M48 62h324M48 104h324M48 146h324M48 188h324M48 230h324M92 45v204M152 45v204M212 45v204M272 45v204M332 45v204" stroke="#d5dde8" stroke-width="2"/>
+                    <path d="M58 74h300M58 134h300M58 194h300" stroke="#005bff" stroke-width="5" fill="none"/>
+                    <path d="M88 50v194M210 50v194M335 50v194" stroke="#e53935" stroke-width="5" fill="none"/>
+                    <path d="M88 74h270M88 134h270M88 194h270" stroke="#005bff" stroke-width="2" stroke-dasharray="8 8" fill="none"/>
+                    <g fill="none" stroke="#7aa7ff" stroke-width="2" opacity="0.55">
+                      <circle cx="88" cy="74" r="25"/><circle cx="148" cy="74" r="25"/><circle cx="208" cy="74" r="25"/><circle cx="268" cy="74" r="25"/><circle cx="328" cy="74" r="25"/>
+                      <circle cx="88" cy="134" r="25"/><circle cx="148" cy="134" r="25"/><circle cx="208" cy="134" r="25"/><circle cx="268" cy="134" r="25"/><circle cx="328" cy="134" r="25"/>
+                      <circle cx="88" cy="194" r="25"/><circle cx="148" cy="194" r="25"/><circle cx="208" cy="194" r="25"/><circle cx="268" cy="194" r="25"/><circle cx="328" cy="194" r="25"/>
+                    </g>
+                    <g fill="#005bff" stroke="#ffffff" stroke-width="2">
+                      <circle cx="88" cy="74" r="7"/><circle cx="148" cy="74" r="7"/><circle cx="208" cy="74" r="7"/><circle cx="268" cy="74" r="7"/><circle cx="328" cy="74" r="7"/>
+                      <circle cx="88" cy="134" r="7"/><circle cx="148" cy="134" r="7"/><circle cx="208" cy="134" r="7"/><circle cx="268" cy="134" r="7"/><circle cx="328" cy="134" r="7"/>
+                      <circle cx="88" cy="194" r="7"/><circle cx="148" cy="194" r="7"/><circle cx="208" cy="194" r="7"/><circle cx="268" cy="194" r="7"/><circle cx="328" cy="194" r="7"/>
+                    </g>
+                    <g fill="#001a3d" font-family="Arial, sans-serif" font-size="12" font-weight="700">
+                      <text x="55" y="255">NFPA 13 spacing: OK</text>
+                      <text x="250" y="255">Remote area: 1,500 GPM</text>
+                    </g>
+                    <g fill="#e53935" font-family="Arial, sans-serif" font-size="11" font-weight="700">
+                      <text x="94" y="58">Main</text>
+                      <text x="218" y="58">Main</text>
+                    </g>
+                    <g fill="#005bff" font-family="Arial, sans-serif" font-size="11" font-weight="700">
+                      <text x="270" y="88">Branch lines</text>
+                      <text x="270" y="148">Sprinkler heads</text>
+                    </g>
                   </svg>
                 </div>
                 <div class="mockup-panel">
@@ -1140,7 +1315,9 @@
                   <div class="metric"><span>Water Demand</span><strong>1,500 GPM</strong></div>
                   <div class="metric"><span>Base Pressure</span><strong>68.2 psi</strong></div>
                   <div class="metric"><span>Sprinklers</span><strong>45</strong></div>
-                  <div class="metric"><span>Status</span><strong>Compliant</strong></div>
+                  <div class="metric"><span>Max Spacing</span><strong>15 ft</strong></div>
+                  <div class="metric"><span>K-Factor</span><strong>5.6</strong></div>
+                  <div class="metric"><span>NFPA 13 Status</span><strong class="status-ok">Compliant</strong></div>
                   <div class="metric"><span>Stock List</span><strong>Ready</strong></div>
                 </div>
               </div>
@@ -1240,7 +1417,7 @@
             <g fill="#005bff"><circle cx="29" cy="99" r="3"/><circle cx="39" cy="106" r="3"/><circle cx="50" cy="112" r="3"/><circle cx="61" cy="115" r="3"/><circle cx="72" cy="112" r="3"/><circle cx="83" cy="106" r="3"/><circle cx="93" cy="99" r="3"/></g>
           </svg>
           <span>
-            <span class="brand-word" style="color:#fff">Sprink<span>Snap</span></span>
+            <span class="brand-word" style="color:#fff">Sprink<span>Snap</span><sup class="logo-reg" style="color:#fff">&reg;</sup></span>
             <span class="brand-tagline" style="display:block;color:#94a3b8">Smarter Design. Code Confident.</span>
           </span>
         </a>
@@ -1258,5 +1435,10 @@
       &copy; 2026 SprinkSnap Inc. All rights reserved. Autodesk and Revit are trademarks of Autodesk, Inc. SprinkSnap is not affiliated with Autodesk.
     </div>
   </footer>
+  <a class="scroll-top" href="#top" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 5 5 12m7-7 7 7M12 5v14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
 </body>
 </html>
