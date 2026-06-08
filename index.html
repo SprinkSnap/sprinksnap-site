@@ -537,6 +537,38 @@
       padding: 0 42px 34px;
     }
 
+    .reference-laptop {
+      padding: 0;
+    }
+
+    .reference-laptop::after {
+      display: none;
+    }
+
+    .laptop-reference-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 24px;
+      box-shadow: 0 28px 70px rgba(0, 0, 0, 0.38);
+    }
+
+    .laptop-image-fallback {
+      border: 1px dashed rgba(255, 255, 255, 0.4);
+      border-radius: 24px;
+      padding: clamp(28px, 5vw, 56px);
+      color: #dbeafe;
+      background: rgba(255, 255, 255, 0.08);
+      text-align: center;
+    }
+
+    .laptop-image-fallback strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #ffffff;
+      font-size: 1.15rem;
+    }
+
     .mockup-window {
       position: relative;
       overflow: hidden;
@@ -950,6 +982,10 @@
         border-radius: 20px;
       }
 
+      .reference-laptop {
+        padding: 0;
+      }
+
       .mockup::after {
         right: 0;
         left: 0;
@@ -1019,6 +1055,17 @@
         margin-right: -10px;
         margin-left: -10px;
         padding: 0 0 24px;
+      }
+
+      .reference-laptop {
+        margin-right: 0;
+        margin-left: 0;
+        padding: 0;
+      }
+
+      .laptop-reference-image,
+      .laptop-image-fallback {
+        border-radius: 16px;
       }
 
       .mockup-window {
@@ -1272,68 +1319,18 @@
               <li>Documentation support for engineering and fabrication teams</li>
             </ul>
           </div>
-          <div class="mockup" aria-label="SprinkSnap software interface preview">
-            <div class="mockup-window">
-              <div class="mockup-bar"><span class="mockup-brand">SprinkSnap</span><span>PROJECT</span><span>LAYOUT</span><span>CALCULATIONS</span><span>ANALYSIS</span><span>BOM</span><span>REPORTS</span></div>
-              <div class="mockup-grid">
-                <div class="mockup-side"><span>Project</span><span>System</span><span>Layout</span><span>Hydraulics</span><span>Analysis</span><span>BOM</span><span>Reports</span></div>
-                <div class="mockup-canvas">
-                  <svg viewBox="0 0 420 300" preserveAspectRatio="none" aria-labelledby="mockup-title mockup-desc" role="img">
-                    <title id="mockup-title">Revit tree sprinkler layout automation preview</title>
-                    <desc id="mockup-desc">A Revit-style NFPA 13 compliant tree sprinkler system with a supply riser, cross main, branch lines, sprinkler heads, spacing labels, and hydraulic calculation nodes.</desc>
-                    <rect x="24" y="28" width="372" height="238" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="3"/>
-                    <path d="M48 62h324M48 104h324M48 146h324M48 188h324M48 230h324M92 45v204M152 45v204M212 45v204M272 45v204M332 45v204" stroke="#d5dde8" stroke-width="2"/>
-                    <path d="M64 46v206" stroke="#e53935" stroke-width="8" stroke-linecap="round"/>
-                    <path d="M64 74h292" stroke="#e53935" stroke-width="7" stroke-linecap="round"/>
-                    <path d="M116 74v150M176 74v150M236 74v150M296 74v150M356 74v150" stroke="#005bff" stroke-width="5" stroke-linecap="round"/>
-                    <path d="M116 74h240" stroke="#005bff" stroke-width="3" stroke-dasharray="8 8" fill="none"/>
-                    <path d="M116 118h240M116 162h240M116 206h240" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 8" fill="none" opacity="0.72"/>
-                    <g fill="none" stroke="#7aa7ff" stroke-width="2" opacity="0.55">
-                      <circle cx="116" cy="118" r="23"/><circle cx="116" cy="162" r="23"/><circle cx="116" cy="206" r="23"/>
-                      <circle cx="176" cy="118" r="23"/><circle cx="176" cy="162" r="23"/><circle cx="176" cy="206" r="23"/>
-                      <circle cx="236" cy="118" r="23"/><circle cx="236" cy="162" r="23"/><circle cx="236" cy="206" r="23"/>
-                      <circle cx="296" cy="118" r="23"/><circle cx="296" cy="162" r="23"/><circle cx="296" cy="206" r="23"/>
-                      <circle cx="356" cy="118" r="23"/><circle cx="356" cy="162" r="23"/><circle cx="356" cy="206" r="23"/>
-                    </g>
-                    <g fill="#005bff" stroke="#ffffff" stroke-width="2">
-                      <circle cx="116" cy="118" r="7"/><circle cx="116" cy="162" r="7"/><circle cx="116" cy="206" r="7"/>
-                      <circle cx="176" cy="118" r="7"/><circle cx="176" cy="162" r="7"/><circle cx="176" cy="206" r="7"/>
-                      <circle cx="236" cy="118" r="7"/><circle cx="236" cy="162" r="7"/><circle cx="236" cy="206" r="7"/>
-                      <circle cx="296" cy="118" r="7"/><circle cx="296" cy="162" r="7"/><circle cx="296" cy="206" r="7"/>
-                      <circle cx="356" cy="118" r="7"/><circle cx="356" cy="162" r="7"/><circle cx="356" cy="206" r="7"/>
-                    </g>
-                    <g fill="#e53935" stroke="#ffffff" stroke-width="1.5">
-                      <circle cx="64" cy="74" r="8"/>
-                    </g>
-                    <path d="M116 226h240M116 226l7-5M116 226l7 5M356 226l-7-5M356 226l-7 5" stroke="#001a3d" stroke-width="2" fill="none"/>
-                    <path d="M374 118v88M374 118l-5 7M374 118l5 7M374 206l-5-7M374 206l5-7" stroke="#001a3d" stroke-width="2" fill="none"/>
-                    <g fill="#001a3d" font-family="Arial, sans-serif" font-size="12" font-weight="700">
-                      <text x="55" y="255">Tree system layout</text>
-                      <text x="182" y="241">15 ft spacing</text>
-                      <text x="294" y="255">Remote area: 1,500 GPM</text>
-                    </g>
-                    <g fill="#e53935" font-family="Arial, sans-serif" font-size="11" font-weight="700">
-                      <text x="40" y="42">Supply riser</text>
-                      <text x="140" y="65">Cross main</text>
-                    </g>
-                    <g fill="#005bff" font-family="Arial, sans-serif" font-size="11" font-weight="700">
-                      <text x="265" y="96">Branch lines</text>
-                      <text x="256" y="150">Sprinkler heads</text>
-                      <text x="283" y="176">NFPA 13 OK</text>
-                    </g>
-                  </svg>
-                </div>
-                <div class="mockup-panel">
-                  <h4>Hydraulic Summary</h4>
-                  <div class="metric"><span>Water Demand</span><strong>1,500 GPM</strong></div>
-                  <div class="metric"><span>Base Pressure</span><strong>68.2 psi</strong></div>
-                  <div class="metric"><span>Sprinklers</span><strong>45</strong></div>
-                  <div class="metric"><span>Max Spacing</span><strong>15 ft</strong></div>
-                  <div class="metric"><span>K-Factor</span><strong>5.6</strong></div>
-                  <div class="metric"><span>NFPA 13 Status</span><strong class="status-ok">Compliant</strong></div>
-                  <div class="metric"><span>Stock List</span><strong>Ready</strong></div>
-                </div>
-              </div>
+          <div class="mockup reference-laptop" aria-label="SprinkSnap laptop interface preview">
+            <img
+              class="laptop-reference-image"
+              src="assets/sprinksnap-laptop.png"
+              alt="SprinkSnap laptop product image showing the Revit fire sprinkler design platform"
+              loading="lazy"
+              onerror="this.hidden=true; this.nextElementSibling.hidden=false;"
+            >
+            <div class="laptop-image-fallback" hidden>
+              <strong>Exact laptop image needed</strong>
+              Export or upload the laptop portion of the attached image as
+              <code>assets/sprinksnap-laptop.png</code> to display it here.
             </div>
           </div>
         </div>
