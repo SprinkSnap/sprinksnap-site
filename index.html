@@ -7,13 +7,13 @@
   <title>SprinkSnap Inc. | Smarter Design. Code Confident.</title>
   <style>
     :root {
-      --blue: #1457e8;
+      --blue: #005bea;
       --blue-dark: #071a33;
       --blue-mid: #0d2c55;
-      --navy: #061226;
-      --text: #0b1730;
+      --navy: #001a3d;
+      --text: #061226;
       --muted: #526078;
-      --red: #f04438;
+      --red: #ff3b30;
       --white: #ffffff;
       --line: #d9e2ef;
     }
@@ -51,6 +51,37 @@
       padding: 58px 34px 32px;
     }
 
+    .launch-banner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: fit-content;
+      margin: 0 auto 34px;
+      border: 1px solid #cfe0ff;
+      border-radius: 999px;
+      padding: 10px 18px;
+      color: var(--navy);
+      background: linear-gradient(180deg, #ffffff, #f4f8ff);
+      box-shadow: 0 14px 34px rgba(0, 91, 234, 0.12);
+      font-size: 0.9rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .launch-banner span:first-child {
+      color: var(--blue);
+    }
+
+    .launch-banner span:last-child {
+      color: #4f5d74;
+      letter-spacing: 0.04em;
+      text-transform: none;
+    }
+
     .hero-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.65fr) minmax(260px, 0.8fr);
@@ -72,6 +103,7 @@
     .sprinkler-mark {
       width: 112px;
       height: 112px;
+      filter: drop-shadow(0 10px 16px rgba(0, 26, 61, 0.12));
     }
 
     .wordmark {
@@ -84,7 +116,7 @@
     }
 
     .wordmark span:first-child {
-      color: #061226;
+      color: var(--navy);
     }
 
     .wordmark span:last-child {
@@ -95,14 +127,14 @@
       position: relative;
       top: -0.7em;
       margin-left: 4px;
-      color: #061226;
+      color: var(--navy);
       font-size: 0.16em;
       letter-spacing: 0;
     }
 
     .tagline {
       margin: 16px 0 0 8px;
-      color: #59647a;
+      color: #505b70;
       font-size: clamp(0.9rem, 1.8vw, 1.08rem);
       font-weight: 800;
       letter-spacing: 0.23em;
@@ -536,6 +568,10 @@
         padding: 42px 24px 32px;
       }
 
+      .launch-banner {
+        margin-bottom: 28px;
+      }
+
       .logo-lockup {
         grid-template-columns: 88px minmax(0, 1fr);
         gap: 14px;
@@ -670,6 +706,13 @@
     @media (max-width: 480px) {
       .hero {
         padding: 30px 16px 24px;
+      }
+
+      .launch-banner {
+        width: 100%;
+        border-radius: 16px;
+        font-size: 0.78rem;
+        letter-spacing: 0.05em;
       }
 
       .wordmark {
@@ -836,16 +879,30 @@
 <body>
   <main class="page">
     <section class="hero" aria-label="SprinkSnap product introduction">
+      <div class="launch-banner" aria-label="Company launch status">
+        <span>Coming Soon</span>
+        <span>Formerly FireAcad Inc.</span>
+      </div>
       <div class="hero-grid">
         <div>
           <div class="logo-lockup">
             <svg class="sprinkler-mark" viewBox="0 0 120 120" aria-hidden="true">
-              <path d="M35 82C12 63 21 35 47 8c-5 21 7 28 7 45" fill="none" stroke="#1457e8" stroke-width="8" stroke-linecap="round"/>
-              <path d="M69 13c21 25 24 48 6 67 4-21-13-27-13-43 0-9 4-16 7-24Z" fill="#f04438"/>
-              <path d="M42 64h36M42 76h36" stroke="#061226" stroke-width="8" stroke-linecap="round"/>
-              <path d="M52 55h16M52 85h16" stroke="#061226" stroke-width="8" stroke-linecap="round"/>
-              <path d="M29 90c4 7 12 12 23 14M91 90c-4 7-12 12-23 14" fill="none" stroke="#1457e8" stroke-width="5" stroke-linecap="round"/>
-              <g fill="#1457e8">
+              <defs>
+                <linearGradient id="mainLogoBlue" x1="16" x2="96" y1="8" y2="114" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#0067ff"/>
+                  <stop offset="1" stop-color="#0050d9"/>
+                </linearGradient>
+                <linearGradient id="mainLogoFlame" x1="55" x2="82" y1="13" y2="79" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#ff2437"/>
+                  <stop offset="1" stop-color="#ff7a1a"/>
+                </linearGradient>
+              </defs>
+              <path d="M35 82C12 63 21 35 47 8c-5 21 7 28 7 45" fill="none" stroke="url(#mainLogoBlue)" stroke-width="8" stroke-linecap="round"/>
+              <path d="M69 13c21 25 24 48 6 67 4-21-13-27-13-43 0-9 4-16 7-24Z" fill="url(#mainLogoFlame)"/>
+              <path d="M42 64h36M42 76h36" stroke="#001a3d" stroke-width="8" stroke-linecap="round"/>
+              <path d="M52 55h16M52 85h16" stroke="#001a3d" stroke-width="8" stroke-linecap="round"/>
+              <path d="M29 90c4 7 12 12 23 14M91 90c-4 7-12 12-23 14" fill="none" stroke="url(#mainLogoBlue)" stroke-width="5" stroke-linecap="round"/>
+              <g fill="#005bea">
                 <circle cx="38" cy="105" r="3"/><circle cx="49" cy="111" r="3"/><circle cx="60" cy="114" r="3"/>
                 <circle cx="71" cy="111" r="3"/><circle cx="82" cy="105" r="3"/><circle cx="28" cy="97" r="3"/>
                 <circle cx="92" cy="97" r="3"/>
@@ -909,11 +966,21 @@
           <div class="product-panel">
             <div class="app-icon" aria-hidden="true">
               <svg class="mini-logo" viewBox="0 0 120 120">
-                <path d="M35 82C12 63 21 35 47 8c-5 21 7 28 7 45" fill="none" stroke="#1457e8" stroke-width="8" stroke-linecap="round"/>
-                <path d="M69 13c21 25 24 48 6 67 4-21-13-27-13-43 0-9 4-16 7-24Z" fill="#f04438"/>
-                <path d="M42 64h36M42 76h36" stroke="#061226" stroke-width="8" stroke-linecap="round"/>
-                <path d="M52 55h16M52 85h16" stroke="#061226" stroke-width="8" stroke-linecap="round"/>
-                <g fill="#1457e8"><circle cx="38" cy="105" r="3"/><circle cx="49" cy="111" r="3"/><circle cx="60" cy="114" r="3"/><circle cx="71" cy="111" r="3"/><circle cx="82" cy="105" r="3"/></g>
+                <defs>
+                  <linearGradient id="miniLogoBlue" x1="16" x2="96" y1="8" y2="114" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#0067ff"/>
+                    <stop offset="1" stop-color="#0050d9"/>
+                  </linearGradient>
+                  <linearGradient id="miniLogoFlame" x1="55" x2="82" y1="13" y2="79" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#ff2437"/>
+                    <stop offset="1" stop-color="#ff7a1a"/>
+                  </linearGradient>
+                </defs>
+                <path d="M35 82C12 63 21 35 47 8c-5 21 7 28 7 45" fill="none" stroke="url(#miniLogoBlue)" stroke-width="8" stroke-linecap="round"/>
+                <path d="M69 13c21 25 24 48 6 67 4-21-13-27-13-43 0-9 4-16 7-24Z" fill="url(#miniLogoFlame)"/>
+                <path d="M42 64h36M42 76h36" stroke="#001a3d" stroke-width="8" stroke-linecap="round"/>
+                <path d="M52 55h16M52 85h16" stroke="#001a3d" stroke-width="8" stroke-linecap="round"/>
+                <g fill="#005bea"><circle cx="38" cy="105" r="3"/><circle cx="49" cy="111" r="3"/><circle cx="60" cy="114" r="3"/><circle cx="71" cy="111" r="3"/><circle cx="82" cy="105" r="3"/></g>
               </svg>
               <span class="sr-only">SprinkSnap app icon</span>
             </div>
