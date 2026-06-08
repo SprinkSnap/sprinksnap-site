@@ -309,6 +309,34 @@
       font-weight: 800;
     }
 
+    .contact-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .contact-strip a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      border: 1px solid #cfe0ff;
+      border-radius: 999px;
+      padding: 0 15px;
+      color: var(--navy);
+      background: #ffffff;
+      box-shadow: 0 10px 28px rgba(11, 31, 58, 0.06);
+      font-size: 0.92rem;
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .contact-strip a:hover {
+      color: var(--blue);
+      border-color: rgba(0, 91, 255, 0.42);
+    }
+
     .waitlist-card {
       border: 1px solid #dce8f8;
       border-radius: 30px;
@@ -925,13 +953,15 @@
       }
 
       .hero-actions,
-      .hero-proof {
+      .hero-proof,
+      .contact-strip {
         display: grid;
         grid-template-columns: 1fr;
       }
 
       .button,
-      .secondary-link {
+      .secondary-link,
+      .contact-strip a {
         width: 100%;
       }
 
@@ -1168,6 +1198,10 @@
             <li>Hydraulic optimization</li>
             <li>Stock listing automation</li>
           </ul>
+          <div class="contact-strip" aria-label="SprinkSnap contact links">
+            <a href="tel:+15198047878">Call 519-804-7878</a>
+            <a href="mailto:info@sprinksnap.com">Email info@sprinksnap.com</a>
+          </div>
         </div>
 
         <aside class="waitlist-card" id="waitlist" aria-labelledby="waitlist-title">
@@ -1344,7 +1378,7 @@
           </details>
           <details>
             <summary>Can I join the beta?</summary>
-            <p>Yes. Submit the waitlist form or contact info@sprinksnap.com to request beta access.</p>
+            <p>Yes. Submit the waitlist form or contact <a href="mailto:info@sprinksnap.com">info@sprinksnap.com</a> to request beta access.</p>
           </details>
           <details>
             <summary>Is SprinkSnap formerly FireAcad Inc.?</summary>
