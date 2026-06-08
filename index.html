@@ -1188,7 +1188,7 @@
               </select>
             </div>
             <button class="button" type="submit">Request Beta Access</button>
-            <p class="form-note">Static preview form: submissions open your email client to send your request to info@sprinksnap.com.</p>
+            <p class="form-note">This opens a prefilled email to info@sprinksnap.com and copies the work email entered above.</p>
           </form>
         </aside>
       </div>
@@ -1363,7 +1363,7 @@
               <input id="company" name="company" type="text" autocomplete="organization" placeholder="Company name">
             </div>
             <button class="button" type="submit">Join the Beta Waitlist</button>
-            <p class="form-note">Questions? Email <a href="mailto:info@sprinksnap.com">info@sprinksnap.com</a> or call <a href="tel:+15198047878">519-804-7878</a>.</p>
+            <p class="form-note">This opens a prefilled email to info@sprinksnap.com and copies your email. Questions? Call <a href="tel:+15198047878">519-804-7878</a>.</p>
           </form>
         </div>
       </div>
@@ -1440,5 +1440,52 @@
       <path d="M12 5 5 12m7-7 7 7M12 5v14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   </a>
+  <script>
+    (function () {
+      var forms = document.querySelectorAll(".waitlist-form");
+
+      forms.forEach(function (form) {
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+          }
+
+          var data = new FormData(form);
+          var email = String(data.get("email") || "").trim();
+          var role = String(data.get("role") || "").trim();
+          var company = String(data.get("company") || "").trim();
+          var source = window.location.href.split("#")[0];
+          var subject = "SprinkSnap Beta Access Request";
+          var bodyLines = [
+            "Hello SprinkSnap team,",
+            "",
+            "I would like to join the SprinkSnap beta waitlist.",
+            "",
+            "Work email: " + email
+          ];
+
+          if (role) {
+            bodyLines.push("Role: " + role);
+          }
+
+          if (company) {
+            bodyLines.push("Company: " + company);
+          }
+
+          bodyLines.push("", "Source page: " + source, "", "Thank you.");
+
+          var mailto = "mailto:info@sprinksnap.com"
+            + "?cc=" + encodeURIComponent(email)
+            + "&subject=" + encodeURIComponent(subject)
+            + "&body=" + encodeURIComponent(bodyLines.join("\n"));
+
+          window.location.href = mailto;
+        });
+      });
+    }());
+  </script>
 </body>
 </html>
