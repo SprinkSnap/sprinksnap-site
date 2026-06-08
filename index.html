@@ -102,47 +102,18 @@
     }
 
     .brand {
-      display: inline-grid;
-      grid-template-columns: 46px auto;
-      gap: 10px;
+      display: inline-flex;
       align-items: center;
-      min-width: max-content;
+      min-width: 0;
       text-decoration: none;
     }
 
-    .brand-mark {
-      width: 46px;
-      height: 46px;
-      filter: drop-shadow(0 8px 12px rgba(11, 31, 58, 0.13));
-    }
-
-    .brand-word {
-      color: var(--navy);
-      font-size: 1.45rem;
-      font-weight: 900;
-      letter-spacing: -0.055em;
-      line-height: 0.95;
-    }
-
-    .brand-word span {
-      color: var(--blue);
-    }
-
-    .logo-reg {
-      position: relative;
-      top: -0.55em;
-      margin-left: 2px;
-      color: var(--navy);
-      font-size: 0.18em;
-      letter-spacing: 0;
-    }
-
-    .brand-tagline {
-      color: #667085;
-      font-size: 0.62rem;
-      font-weight: 900;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
+    .brand-image {
+      display: block;
+      width: auto;
+      max-width: min(250px, 52vw);
+      height: 54px;
+      object-fit: contain;
     }
 
     .nav-links {
@@ -780,6 +751,21 @@
       font-size: 0.92rem;
     }
 
+    .footer-brand {
+      width: fit-content;
+      border-radius: 18px;
+      padding: 10px 14px;
+      background: #ffffff;
+    }
+
+    .footer-logo-image {
+      display: block;
+      width: auto;
+      max-width: min(300px, 72vw);
+      height: 86px;
+      object-fit: contain;
+    }
+
     .copyright {
       border-top: 1px solid rgba(255, 255, 255, 0.12);
       padding: 18px 0;
@@ -788,42 +774,16 @@
     }
 
     .brand-logo {
-      display: inline-grid;
-      grid-template-columns: 104px auto;
-      gap: 20px;
-      align-items: center;
+      display: block;
       margin-bottom: 24px;
     }
 
-    .brand-logo > span {
-      min-width: 0;
-    }
-
-    .brand-logo svg {
-      width: 104px;
-      height: 104px;
-    }
-
-    .logo-word {
-      color: var(--navy);
-      font-size: clamp(3rem, 7vw, 5.8rem);
-      font-weight: 950;
-      letter-spacing: -0.075em;
-      line-height: 0.9;
-      white-space: nowrap;
-    }
-
-    .logo-word span {
-      color: var(--blue);
-    }
-
-    .logo-tagline {
-      margin-top: 8px;
-      color: #667085;
-      font-size: clamp(0.72rem, 1.4vw, 0.94rem);
-      font-weight: 900;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
+    .hero-logo-image {
+      display: block;
+      width: auto;
+      max-width: 100%;
+      height: clamp(130px, 21vw, 230px);
+      object-fit: contain;
     }
 
     .sr-only {
@@ -890,10 +850,6 @@
         font-size: 0.86rem;
       }
 
-      .brand-tagline {
-        display: none;
-      }
-
       .mockup-grid {
         grid-template-columns: 76px 1fr;
       }
@@ -931,21 +887,11 @@
       }
 
       .brand-logo {
-        grid-template-columns: 48px auto;
         margin-bottom: 18px;
       }
 
-      .brand-logo svg {
-        width: 48px;
-        height: 48px;
-      }
-
-      .logo-word {
-        font-size: clamp(2rem, 11vw, 3.2rem);
-      }
-
-      .logo-tagline {
-        letter-spacing: 0.12em;
+      .hero-logo-image {
+        width: min(100%, 520px);
       }
 
       .eyebrow {
@@ -1002,18 +948,12 @@
       }
 
       .brand {
-        grid-template-columns: 38px auto;
-        gap: 8px;
         min-width: 0;
       }
 
-      .brand-mark {
-        width: 38px;
-        height: 38px;
-      }
-
-      .brand-word {
-        font-size: 1.18rem;
+      .brand-image {
+        max-width: 52vw;
+        height: 44px;
       }
 
       .hero {
@@ -1021,23 +961,12 @@
       }
 
       .brand-logo {
-        grid-template-columns: 1fr;
-        justify-items: center;
         text-align: center;
       }
 
-      .brand-logo svg {
-        width: 82px;
-        height: 82px;
-      }
-
-      .logo-word {
-        font-size: clamp(2rem, 13vw, 3rem);
-      }
-
-      .logo-tagline {
-        font-size: 0.68rem;
-        letter-spacing: 0.08em;
+      .hero-logo-image {
+        margin: 0 auto;
+        height: clamp(120px, 38vw, 180px);
       }
 
       .eyebrow {
@@ -1081,17 +1010,13 @@
     }
 
     @media (max-width: 360px) {
-      .brand-word {
-        font-size: 1.05rem;
-      }
-
       .header-cta {
         padding: 0 10px;
         font-size: 0.78rem;
       }
 
-      .logo-word {
-        font-size: 1.9rem;
+      .brand-image {
+        height: 38px;
       }
     }
   </style>
@@ -1117,27 +1042,7 @@
   <header class="site-header">
     <nav class="nav" aria-label="Primary navigation">
       <a class="brand" href="#top" aria-label="SprinkSnap home">
-        <svg class="brand-mark" viewBox="0 0 120 120" aria-hidden="true">
-          <defs>
-            <linearGradient id="headerBlue" x1="18" x2="96" y1="10" y2="112" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#006dff"/>
-              <stop offset="1" stop-color="#005bff"/>
-            </linearGradient>
-            <linearGradient id="headerFlame" x1="60" x2="87" y1="12" y2="86" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#e53935"/>
-              <stop offset="1" stop-color="#ff7a18"/>
-            </linearGradient>
-          </defs>
-          <path d="M36 88C16 75 12 55 24 36c6-9 14-18 25-29-3 21 8 28 5 45-2 13-10 25-18 36Z" fill="none" stroke="url(#headerBlue)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M79 23c17 21 22 45 9 65" fill="none" stroke="url(#headerBlue)" stroke-width="9" stroke-linecap="round"/>
-          <path d="M70 13c18 21 25 42 19 59-4 11-12 19-24 23 8-18-6-27-6-43 0-14 7-27 11-39Z" fill="url(#headerFlame)"/>
-          <path d="M42 63h36M39 76h42M51 54h18M52 86h16" stroke="#001a3d" stroke-width="8" stroke-linecap="round"/>
-          <g fill="#005bff"><circle cx="29" cy="99" r="3"/><circle cx="39" cy="106" r="3"/><circle cx="50" cy="112" r="3"/><circle cx="61" cy="115" r="3"/><circle cx="72" cy="112" r="3"/><circle cx="83" cy="106" r="3"/><circle cx="93" cy="99" r="3"/></g>
-        </svg>
-        <span>
-          <span class="brand-word">Sprink<span>Snap</span><sup class="logo-reg">&reg;</sup></span>
-          <span class="brand-tagline">Smarter Design. Code Confident.</span>
-        </span>
+        <img class="brand-image" src="assets/sprinksnap-logo-transparent.png" alt="SprinkSnap - Smarter Design. Code Confident.">
       </a>
       <div class="nav-links" aria-label="Page sections">
         <a href="#benefits">Benefits</a>
@@ -1154,28 +1059,7 @@
       <div class="container hero-grid">
         <div>
           <div class="brand-logo" aria-label="SprinkSnap">
-            <svg viewBox="0 0 120 120" aria-hidden="true">
-              <defs>
-                <linearGradient id="heroBlue" x1="18" x2="96" y1="10" y2="112" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#006dff"/>
-                  <stop offset="1" stop-color="#005bff"/>
-                </linearGradient>
-                <linearGradient id="heroFlame" x1="60" x2="87" y1="12" y2="86" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#e53935"/>
-                  <stop offset="1" stop-color="#ff7a18"/>
-                </linearGradient>
-              </defs>
-              <path d="M36 88C16 75 12 55 24 36c6-9 14-18 25-29-3 21 8 28 5 45-2 13-10 25-18 36Z" fill="none" stroke="url(#heroBlue)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M79 23c17 21 22 45 9 65" fill="none" stroke="url(#heroBlue)" stroke-width="9" stroke-linecap="round"/>
-              <path d="M70 13c18 21 25 42 19 59-4 11-12 19-24 23 8-18-6-27-6-43 0-14 7-27 11-39Z" fill="url(#heroFlame)"/>
-              <path d="M42 63h36M39 76h42M51 54h18M52 86h16" stroke="#001a3d" stroke-width="8" stroke-linecap="round"/>
-              <path d="M30 91c6 7 15 12 26 14M90 91c-6 7-15 12-26 14" fill="none" stroke="url(#heroBlue)" stroke-width="5" stroke-linecap="round"/>
-              <g fill="#005bff"><circle cx="29" cy="99" r="3"/><circle cx="39" cy="106" r="3"/><circle cx="50" cy="112" r="3"/><circle cx="61" cy="115" r="3"/><circle cx="72" cy="112" r="3"/><circle cx="83" cy="106" r="3"/><circle cx="93" cy="99" r="3"/></g>
-            </svg>
-            <span>
-              <span class="logo-word">Sprink<span>Snap</span><sup class="logo-reg">&reg;</sup></span>
-              <span class="logo-tagline">Smarter Design. Code Confident.</span>
-            </span>
+            <img class="hero-logo-image" src="assets/sprinksnap-logo-transparent.png" alt="SprinkSnap - Smarter Design. Code Confident.">
           </div>
           <div class="eyebrow">
             <strong>Coming Soon</strong>
@@ -1390,18 +1274,8 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <a class="brand" href="#top" aria-label="SprinkSnap home">
-          <svg class="brand-mark" viewBox="0 0 120 120" aria-hidden="true">
-            <path d="M36 88C16 75 12 55 24 36c6-9 14-18 25-29-3 21 8 28 5 45-2 13-10 25-18 36Z" fill="none" stroke="#005bff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M79 23c17 21 22 45 9 65" fill="none" stroke="#005bff" stroke-width="9" stroke-linecap="round"/>
-            <path d="M70 13c18 21 25 42 19 59-4 11-12 19-24 23 8-18-6-27-6-43 0-14 7-27 11-39Z" fill="#e53935"/>
-            <path d="M42 63h36M39 76h42M51 54h18M52 86h16" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
-            <g fill="#005bff"><circle cx="29" cy="99" r="3"/><circle cx="39" cy="106" r="3"/><circle cx="50" cy="112" r="3"/><circle cx="61" cy="115" r="3"/><circle cx="72" cy="112" r="3"/><circle cx="83" cy="106" r="3"/><circle cx="93" cy="99" r="3"/></g>
-          </svg>
-          <span>
-            <span class="brand-word" style="color:#fff">Sprink<span>Snap</span><sup class="logo-reg" style="color:#fff">&reg;</sup></span>
-            <span class="brand-tagline" style="display:block;color:#94a3b8">Smarter Design. Code Confident.</span>
-          </span>
+        <a class="brand footer-brand" href="#top" aria-label="SprinkSnap home">
+          <img class="footer-logo-image" src="assets/sprinksnap-logo-transparent.png" alt="SprinkSnap - Smarter Design. Code Confident.">
         </a>
         <p class="footer-note">SprinkSnap Inc., formerly FireAcad Inc., is building professional fire protection sprinkler design automation for Autodesk Revit.</p>
       </div>
