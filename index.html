@@ -417,15 +417,19 @@
       height: 42px;
       margin-bottom: 18px;
       place-items: center;
-      border-radius: 13px;
       color: var(--blue);
-      background: var(--blue-100);
     }
 
     .icon svg {
-      width: 24px;
-      height: 24px;
+      width: 32px;
+      height: 32px;
       stroke: currentColor;
+    }
+
+    .icon-revit svg {
+      width: 34px;
+      height: 34px;
+      stroke: none;
     }
 
     .card h3 {
@@ -1128,9 +1132,11 @@
         <div class="benefits">
           <article class="card">
             <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="4"/>
-                <path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/>
+              <svg viewBox="0 0 36 36" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="18" cy="18" r="8"/>
+                <circle cx="18" cy="18" r="2.5"/>
+                <path d="M18 3v7M18 26v7M3 18h7M26 18h7"/>
+                <path d="M18 12v12M12 18h12"/>
               </svg>
             </div>
             <h3>Automated Layout</h3>
@@ -1138,9 +1144,9 @@
           </article>
           <article class="card">
             <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 3 20 6v6c0 5-3.4 8-8 9-4.6-1-8-4-8-9V6l8-3Z"/>
-                <path d="m8 12 3 3 5-6"/>
+              <svg viewBox="0 0 36 36" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 3.5 30 8.5v9c0 7.5-5.1 12.2-12 15-6.9-2.8-12-7.5-12-15v-9l12-5Z"/>
+                <path d="m12.5 18 4 4 8-9"/>
               </svg>
             </div>
             <h3>NFPA 13 Compliance</h3>
@@ -1148,9 +1154,9 @@
           </article>
           <article class="card">
             <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 3c-4 5-7 8.5-7 12a7 7 0 0 0 14 0c0-3.5-3-7-7-12Z"/>
-                <path d="M9 16c1.4 1.4 4.6 1.4 6 0"/>
+              <svg viewBox="0 0 36 36" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 4C12.2 12 8 17 8 23a10 10 0 0 0 20 0c0-6-4.2-11-10-19Z"/>
+                <path d="M14.5 25c2.2 2.1 4.8 2.1 7 0"/>
               </svg>
             </div>
             <h3>Hydraulic Optimization</h3>
@@ -1158,20 +1164,25 @@
           </article>
           <article class="card">
             <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M7 3h7l4 4v14H7V3Z"/>
-                <path d="M14 3v5h5M10 12h6M10 16h6M10 8h2"/>
+              <svg viewBox="0 0 36 36" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 4h13l5 5v23H10V4Z"/>
+                <path d="M23 4v7h7M14 17h10M14 22h10M14 27h7"/>
               </svg>
             </div>
             <h3>Material Takeoffs</h3>
             <p>Generate bills of material and stock listings to reduce manual counting and fabrication errors.</p>
           </article>
           <article class="card">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 3 20 7.5v9L12 21l-8-4.5v-9L12 3Z"/>
-                <path d="m4 7.5 8 4.5 8-4.5M12 12v9"/>
-                <path d="M9 9h4.2c1.4 0 2.3.8 2.3 2s-.9 2-2.3 2H9V9Zm4 4 2.5 3"/>
+            <div class="icon icon-revit" aria-hidden="true">
+              <svg viewBox="0 0 36 36">
+                <defs>
+                  <linearGradient id="revitIconBlue" x1="6" x2="30" y1="6" y2="30" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#2F86FF"/>
+                    <stop offset="1" stop-color="#005BFF"/>
+                  </linearGradient>
+                </defs>
+                <rect x="6" y="6" width="24" height="24" rx="3" fill="url(#revitIconBlue)"/>
+                <path d="M10 9h9.2c3.8 0 6.1 2 6.1 5.2 0 2.3-1.3 4-3.5 4.8l4.1 8h-5l-3.7-7.3h-2.5V27H10V9Zm4.7 3.8v3.5h4c1.3 0 2-.6 2-1.8s-.7-1.7-2-1.7h-4Z" fill="#fff"/>
               </svg>
             </div>
             <h3>Revit Integration</h3>
