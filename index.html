@@ -1207,7 +1207,9 @@
         <aside class="waitlist-card" id="waitlist" aria-labelledby="waitlist-title">
           <h2 id="waitlist-title">Get early access to SprinkSnap</h2>
           <p>Join the priority beta list for launch updates, product previews, and early access invitations.</p>
-          <form class="waitlist-form" action="mailto:info@sprinksnap.com" method="post" enctype="text/plain">
+          <form class="waitlist-form" action="https://formspree.io/f/mwvjbqzj" method="POST">
+            <input type="hidden" name="_subject" value="New SprinkSnap beta waitlist request">
+            <input type="hidden" name="source" value="Hero beta waitlist form">
             <div class="form-row">
               <label for="email">Work email</label>
               <input id="email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required>
@@ -1224,7 +1226,7 @@
             </div>
             <button class="button" type="submit">Reserve My Beta Spot</button>
             <p class="conversion-note">No spam. No sales pressure. Just launch updates and beta access information for fire protection teams.</p>
-            <p class="form-note">This opens a prefilled email to info@sprinksnap.com and copies the work email entered above.</p>
+            <p class="form-note">Your request is securely captured and sent to the SprinkSnap team.</p>
           </form>
         </aside>
       </div>
@@ -1371,7 +1373,9 @@
             <h2 id="signup-title">Join the beta list before launch.</h2>
             <p>Reserve your place for SprinkSnap launch updates, beta invitations, and product announcements for fire protection design teams.</p>
           </div>
-          <form class="waitlist-form" action="mailto:info@sprinksnap.com" method="post" enctype="text/plain">
+          <form class="waitlist-form" action="https://formspree.io/f/mwvjbqzj" method="POST">
+            <input type="hidden" name="_subject" value="New SprinkSnap beta waitlist request">
+            <input type="hidden" name="source" value="Lower beta access form">
             <div class="form-row">
               <label for="signup-email">Work email</label>
               <input id="signup-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required>
@@ -1381,7 +1385,7 @@
               <input id="company" name="company" type="text" autocomplete="organization" placeholder="Company name">
             </div>
             <button class="button" type="submit">Reserve Beta Access</button>
-            <p class="form-note">This opens a prefilled email to info@sprinksnap.com and copies your email.</p>
+            <p class="form-note">Your request is securely captured and sent to the SprinkSnap team.</p>
           </form>
         </div>
       </div>
@@ -1447,52 +1451,5 @@
       <path d="M12 5 5 12m7-7 7 7M12 5v14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   </a>
-  <script>
-    (function () {
-      var forms = document.querySelectorAll(".waitlist-form");
-
-      forms.forEach(function (form) {
-        form.addEventListener("submit", function (event) {
-          event.preventDefault();
-
-          if (!form.checkValidity()) {
-            form.reportValidity();
-            return;
-          }
-
-          var data = new FormData(form);
-          var email = String(data.get("email") || "").trim();
-          var role = String(data.get("role") || "").trim();
-          var company = String(data.get("company") || "").trim();
-          var source = window.location.href.split("#")[0];
-          var subject = "SprinkSnap Beta Access Request";
-          var bodyLines = [
-            "Hello SprinkSnap team,",
-            "",
-            "I would like to join the SprinkSnap beta waitlist.",
-            "",
-            "Work email: " + email
-          ];
-
-          if (role) {
-            bodyLines.push("Role: " + role);
-          }
-
-          if (company) {
-            bodyLines.push("Company: " + company);
-          }
-
-          bodyLines.push("", "Source page: " + source, "", "Thank you.");
-
-          var mailto = "mailto:info@sprinksnap.com"
-            + "?cc=" + encodeURIComponent(email)
-            + "&subject=" + encodeURIComponent(subject)
-            + "&body=" + encodeURIComponent(bodyLines.join("\n"));
-
-          window.location.href = mailto;
-        });
-      });
-    }());
-  </script>
 </body>
 </html>
