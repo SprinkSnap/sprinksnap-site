@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SprinkSnap Terms of Use and Disclaimer for the Revit fire sprinkler design automation beta waitlist, website, software previews, and engineering responsibility.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sprinksnap.com/terms.html">
+  <meta name="theme-color" content="#001A3D">
+  <meta property="og:title" content="Terms of Use and Disclaimer | SprinkSnap">
+  <meta property="og:description" content="Review SprinkSnap terms, beta disclaimers, professional engineering responsibility, NFPA 13 compliance notes, and Autodesk/Revit trademark notices.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sprinksnap.com/terms.html">
+  <meta property="og:image" content="https://sprinksnap.com/sprinksnap-logo-transparent.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Terms of Use and Disclaimer | SprinkSnap">
+  <meta name="twitter:description" content="SprinkSnap terms and engineering disclaimers for fire protection professionals interested in Revit sprinkler design automation.">
+  <meta name="twitter:image" content="https://sprinksnap.com/sprinksnap-logo-transparent.png">
+  <title>Terms of Use and Disclaimer | SprinkSnap</title>
+  <style>
+    :root {
+      --navy: #001a3d;
+      --navy-900: #061426;
+      --blue: #005bff;
+      --blue-700: #0057e8;
+      --blue-100: #eaf2ff;
+      --red: #e53935;
+      --slate: #475569;
+      --line: #dbe5f1;
+      --shadow: 0 24px 70px rgba(11, 31, 58, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      margin: 0;
+      color: var(--navy);
+      background:
+        radial-gradient(circle at 86% 8%, rgba(0, 91, 255, 0.12), transparent 24rem),
+        linear-gradient(180deg, #ffffff 0%, #f8fbff 58%, #ffffff 100%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: var(--blue);
+      font-weight: 800;
+    }
+
+    :focus-visible {
+      outline: 3px solid rgba(0, 91, 255, 0.48);
+      outline-offset: 3px;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(219, 229, 241, 0.86);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(18px);
+    }
+
+    .container {
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      display: flex;
+      min-height: 76px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .brand img {
+      display: block;
+      width: auto;
+      max-width: min(250px, 52vw);
+      height: 54px;
+      object-fit: contain;
+    }
+
+    .nav-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+
+    .button,
+    .secondary-button {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 0 18px;
+      font-weight: 950;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .button {
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--blue), var(--blue-700));
+      box-shadow: 0 16px 34px rgba(0, 91, 255, 0.24);
+    }
+
+    .secondary-button {
+      border: 1px solid var(--line);
+      color: var(--navy);
+      background: #ffffff;
+    }
+
+    .hero {
+      padding: clamp(48px, 8vw, 92px) 0 28px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      border: 1px solid #cfe0ff;
+      border-radius: 999px;
+      padding: 8px 13px;
+      color: var(--blue);
+      background: #ffffff;
+      box-shadow: 0 10px 28px rgba(11, 31, 58, 0.06);
+      font-size: 0.82rem;
+      font-weight: 950;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 18px 0 0;
+      color: var(--navy);
+      font-size: clamp(2.45rem, 6vw, 4.85rem);
+      line-height: 0.98;
+      letter-spacing: -0.062em;
+    }
+
+    .lead {
+      max-width: 800px;
+      margin: 22px 0 0;
+      color: var(--slate);
+      font-size: clamp(1.05rem, 1.7vw, 1.22rem);
+    }
+
+    .terms-shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 300px;
+      gap: clamp(26px, 5vw, 56px);
+      align-items: start;
+      padding: 28px 0 clamp(64px, 8vw, 108px);
+    }
+
+    .terms-card {
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      padding: clamp(24px, 5vw, 48px);
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: var(--shadow);
+    }
+
+    .terms-card h2 {
+      margin: 36px 0 10px;
+      color: var(--navy);
+      font-size: clamp(1.35rem, 2vw, 1.85rem);
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+    }
+
+    .terms-card h2:first-child {
+      margin-top: 0;
+    }
+
+    .terms-card p,
+    .terms-card li {
+      color: var(--slate);
+    }
+
+    .terms-card ul {
+      margin: 12px 0 0;
+      padding-left: 1.2rem;
+    }
+
+    .important-note {
+      border-left: 4px solid var(--red);
+      border-radius: 18px;
+      margin: 24px 0;
+      padding: 18px;
+      color: var(--navy);
+      background: #fff6f6;
+    }
+
+    .important-note strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--navy);
+    }
+
+    .trust-box {
+      position: sticky;
+      top: 100px;
+      border: 1px solid #cfe0ff;
+      border-radius: 24px;
+      padding: 22px;
+      background: #ffffff;
+      box-shadow: 0 14px 42px rgba(11, 31, 58, 0.08);
+    }
+
+    .trust-box h2 {
+      margin: 0;
+      color: var(--navy);
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+    }
+
+    .trust-list {
+      display: grid;
+      gap: 12px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .trust-list li {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 10px;
+      color: var(--slate);
+      font-size: 0.92rem;
+    }
+
+    .check {
+      display: grid;
+      width: 28px;
+      height: 28px;
+      place-items: center;
+      border-radius: 999px;
+      color: var(--blue);
+      background: var(--blue-100);
+      font-weight: 950;
+    }
+
+    .cta-card {
+      margin-top: 18px;
+      border-radius: 18px;
+      padding: 16px;
+      color: var(--navy);
+      background: #f8fbff;
+      font-size: 0.92rem;
+    }
+
+    .cta-card .button {
+      width: 100%;
+      margin-top: 12px;
+    }
+
+    .site-footer {
+      color: #cbd5e1;
+      background: var(--navy-900);
+    }
+
+    .footer-grid {
+      display: flex;
+      min-height: 96px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 20px 0;
+    }
+
+    .site-footer a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: flex-end;
+    }
+
+    @media (max-width: 820px) {
+      .terms-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-box {
+        position: static;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(100% - 28px, 1080px);
+      }
+
+      .nav {
+        min-height: auto;
+        padding: 16px 0;
+      }
+
+      .brand img {
+        height: 44px;
+      }
+
+      .nav-actions {
+        display: none;
+      }
+
+      .footer-grid {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-links {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "SprinkSnap Terms of Use and Disclaimer",
+      "url": "https://sprinksnap.com/terms.html",
+      "description": "Terms of use and disclaimers for SprinkSnap fire protection sprinkler design automation software and beta waitlist.",
+      "dateModified": "2026-06-09",
+      "publisher": {
+        "@type": "Organization",
+        "name": "SprinkSnap Inc.",
+        "email": "info@sprinksnap.com",
+        "url": "https://sprinksnap.com/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/" aria-label="SprinkSnap home">
+        <img src="sprinksnap-logo-transparent.png" alt="SprinkSnap - Smarter Design. Code Confident.">
+      </a>
+      <div class="nav-actions">
+        <a class="secondary-button" href="/">Home</a>
+        <a class="button" href="/#waitlist">Join Beta</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">Terms and Disclaimer</div>
+        <h1>Professional terms for responsible engineering software use.</h1>
+        <p class="lead">
+          SprinkSnap is being built for fire protection professionals who need faster
+          Revit workflows, NFPA 13 design support, hydraulic calculations, pipe sizing,
+          and material takeoffs. These terms explain important conditions and
+          engineering responsibilities.
+        </p>
+      </div>
+    </section>
+
+    <section class="container terms-shell" aria-label="SprinkSnap terms and disclaimer">
+      <article class="terms-card">
+        <h2>Overview</h2>
+        <p>
+          These Terms of Use and Disclaimer apply to sprinksnap.com, the SprinkSnap
+          beta waitlist, website content, product previews, and related communications.
+          SprinkSnap Inc. was formerly FireAcad Inc. and is developing fire protection
+          sprinkler design automation software for Autodesk Revit.
+        </p>
+
+        <div class="important-note">
+          <strong>Engineering responsibility remains with the user.</strong>
+          SprinkSnap is intended to support professional workflows. It does not replace
+          a qualified fire protection engineer, licensed designer, authority having
+          jurisdiction, code review, or professional judgment.
+        </div>
+
+        <h2>Beta and pre-release status</h2>
+        <p>
+          SprinkSnap is currently presented as a coming product and beta opportunity.
+          Product descriptions, screenshots, planned features, timing, availability,
+          and functionality may change before public release. Joining the beta waitlist
+          does not guarantee access, pricing, delivery date, or feature availability.
+        </p>
+
+        <h2>No professional engineering advice</h2>
+        <p>
+          Website content, product previews, examples, and marketing materials are
+          provided for general informational purposes only. They are not professional
+          engineering advice, design certification, code approval, or a substitute for
+          project-specific review by qualified professionals.
+        </p>
+
+        <h2>NFPA 13 and code compliance disclaimer</h2>
+        <p>
+          SprinkSnap is intended to help automate and organize workflows related to
+          NFPA 13 fire sprinkler design. However, users remain responsible for verifying
+          all design outputs, calculations, spacing, material selections, documentation,
+          and code compliance against the applicable project requirements, adopted
+          codes, standards, local amendments, and authority having jurisdiction.
+        </p>
+
+        <h2>Hydraulic calculations and pipe sizing</h2>
+        <p>
+          Any hydraulic calculation, water demand, pressure, pipe sizing, routing,
+          or stock listing output generated by SprinkSnap must be independently reviewed
+          and verified before use for permitting, construction, fabrication, installation,
+          inspection, or life-safety decisions.
+        </p>
+
+        <h2>User responsibilities</h2>
+        <p>By using the website, joining the beta list, or later using SprinkSnap, you agree that you are responsible for:</p>
+        <ul>
+          <li>Entering accurate project information, design criteria, and water supply data.</li>
+          <li>Reviewing all automated layouts, calculations, pipe sizes, and documentation.</li>
+          <li>Confirming compliance with NFPA 13 and all applicable codes and standards.</li>
+          <li>Obtaining required engineering review, approvals, permits, and AHJ acceptance.</li>
+          <li>Using professional judgment before relying on any software-generated output.</li>
+        </ul>
+
+        <h2>Website and waitlist use</h2>
+        <p>
+          You may use sprinksnap.com to learn about SprinkSnap, request beta access,
+          and contact the company. You agree not to misuse the website, submit false
+          information, interfere with the forms, attempt unauthorized access, or use
+          the site for unlawful purposes.
+        </p>
+
+        <h2>Intellectual property</h2>
+        <p>
+          SprinkSnap names, logos, branding, website copy, product concepts, designs,
+          and related materials are owned by SprinkSnap Inc. or its licensors. You may
+          not copy, reproduce, modify, or distribute SprinkSnap materials without
+          written permission, except as allowed by law.
+        </p>
+
+        <h2>Autodesk and Revit trademark notice</h2>
+        <p>
+          Autodesk and Revit are trademarks or registered trademarks of Autodesk, Inc.
+          SprinkSnap is not affiliated with, endorsed by, sponsored by, or approved by
+          Autodesk, Inc. References to Autodesk Revit are used to describe intended
+          interoperability and workflow context.
+        </p>
+
+        <h2>Third-party services</h2>
+        <p>
+          SprinkSnap may use third-party services such as Formspree for form processing
+          and Cloudflare for hosting, DNS, security, or analytics. Use of those services
+          may be subject to their own terms and policies.
+        </p>
+
+        <h2>No warranties</h2>
+        <p>
+          The website, beta materials, and product previews are provided on an "as is"
+          and "as available" basis. SprinkSnap does not make warranties about website
+          availability, uninterrupted access, error-free content, future product
+          availability, or suitability for a specific project.
+        </p>
+
+        <h2>Limitation of liability</h2>
+        <p>
+          To the maximum extent permitted by law, SprinkSnap Inc. will not be liable
+          for indirect, incidental, consequential, special, exemplary, or punitive
+          damages arising from use of the website, beta waitlist, product previews, or
+          future software. Users are responsible for independent review before relying
+          on any design, calculation, or documentation output.
+        </p>
+
+        <h2>Changes to these terms</h2>
+        <p>
+          SprinkSnap may update these Terms of Use and Disclaimer as the product,
+          website, beta program, or legal requirements evolve. The latest version will
+          be posted on this page.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          For questions about these terms, contact SprinkSnap at
+          <a href="mailto:info@sprinksnap.com">info@sprinksnap.com</a>.
+        </p>
+      </article>
+
+      <aside class="trust-box" aria-label="Responsible use summary">
+        <h2>Responsible use summary</h2>
+        <ul class="trust-list">
+          <li><span class="check">1</span><span>Software supports professionals; it does not replace engineering judgment.</span></li>
+          <li><span class="check">2</span><span>Users must verify NFPA 13 and local code compliance.</span></li>
+          <li><span class="check">3</span><span>Hydraulic and pipe sizing outputs require review before project use.</span></li>
+          <li><span class="check">4</span><span>Beta features, timing, and availability may change.</span></li>
+        </ul>
+        <div class="cta-card">
+          <strong>Interested in SprinkSnap?</strong><br>
+          Join the beta list for launch updates and early access information.
+          <a class="button" href="/#waitlist">Join Beta</a>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <span>&copy; 2026 SprinkSnap Inc. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/#waitlist">Beta Waitlist</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="mailto:info@sprinksnap.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
