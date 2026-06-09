@@ -3,14 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SprinkSnap is a coming-soon fire protection sprinkler design automation platform for Autodesk Revit. Join the beta waitlist for NFPA 13 layout automation, hydraulic calculations, optimized pipe sizing, and material takeoffs.">
+  <meta name="description" content="SprinkSnap automates NFPA 13 fire sprinkler design in Revit with layout automation, hydraulic calculations, pipe sizing, and material takeoffs.">
   <meta name="keywords" content="SprinkSnap, Revit sprinkler design, NFPA 13, fire protection software, sprinkler hydraulic calculations, sprinkler stock listing, material takeoff, Autodesk Revit plugin">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sprinksnap.com/">
+  <meta name="theme-color" content="#001A3D">
   <meta property="og:title" content="SprinkSnap | The Complete Fire Sprinkler Design Solution for Revit">
-  <meta property="og:description" content="SprinkSnap is the intelligent Revit plugin and desktop platform for fire protection sprinkler designers. It automates layout, sizing, and calculations to NFPA 13.">
+  <meta property="og:description" content="Automate fire sprinkler layout, NFPA 13 workflows, hydraulic calculations, optimized pipe sizing, and material takeoffs in Revit.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sprinksnap.com/">
+  <meta property="og:image" content="https://sprinksnap.com/sprinksnap-logo-transparent.png">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SprinkSnap | Fire Sprinkler Design Automation for Revit">
+  <meta name="twitter:description" content="Join the beta waitlist for NFPA 13 sprinkler layout automation, hydraulic calculations, pipe sizing, and material takeoffs.">
+  <meta name="twitter:image" content="https://sprinksnap.com/sprinksnap-logo-transparent.png">
   <title>SprinkSnap | The Complete Fire Sprinkler Design Solution for Revit</title>
   <style>
     :root {
@@ -280,6 +286,37 @@
       font-weight: 800;
     }
 
+    .trust-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 24px;
+      max-width: 680px;
+    }
+
+    .trust-item {
+      border: 1px solid #dce8f8;
+      border-radius: 18px;
+      padding: 14px;
+      background: rgba(255, 255, 255, 0.84);
+      box-shadow: 0 12px 30px rgba(11, 31, 58, 0.06);
+    }
+
+    .trust-item strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.08rem;
+      line-height: 1;
+    }
+
+    .trust-item span {
+      display: block;
+      margin-top: 6px;
+      color: #64748b;
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
     .contact-strip {
       display: flex;
       flex-wrap: wrap;
@@ -327,6 +364,15 @@
     .waitlist-card p {
       margin: 12px 0 0;
       color: var(--slate);
+    }
+
+    .conversion-note {
+      border-radius: 14px;
+      padding: 12px 14px;
+      color: #0f3f8f;
+      background: #edf5ff;
+      font-size: 0.88rem;
+      font-weight: 800;
     }
 
     .waitlist-form {
@@ -910,7 +956,8 @@
 
       .hero-actions,
       .hero-proof,
-      .contact-strip {
+      .contact-strip,
+      .trust-bar {
         display: grid;
         grid-template-columns: 1fr;
       }
@@ -1033,16 +1080,71 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "SprinkSnap",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Windows",
-      "description": "Fire protection sprinkler design automation platform for Autodesk Revit, built for NFPA 13 workflows, hydraulic calculations, optimized pipe sizing, and material takeoffs.",
-      "publisher": {
-        "@type": "Organization",
-        "name": "SprinkSnap Inc.",
-        "email": "info@sprinksnap.com"
-      }
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://sprinksnap.com/#organization",
+          "name": "SprinkSnap Inc.",
+          "email": "info@sprinksnap.com",
+          "url": "https://sprinksnap.com/",
+          "logo": "https://sprinksnap.com/sprinksnap-logo-transparent.png",
+          "description": "SprinkSnap Inc. builds fire protection sprinkler design automation software for Autodesk Revit."
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://sprinksnap.com/#website",
+          "url": "https://sprinksnap.com/",
+          "name": "SprinkSnap",
+          "publisher": { "@id": "https://sprinksnap.com/#organization" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://sprinksnap.com/#software",
+          "name": "SprinkSnap",
+          "applicationCategory": "EngineeringApplication",
+          "operatingSystem": "Windows",
+          "url": "https://sprinksnap.com/",
+          "description": "Fire protection sprinkler design automation platform for Autodesk Revit, built for NFPA 13 workflows, hydraulic calculations, optimized pipe sizing, material takeoffs, and stock listings.",
+          "publisher": { "@id": "https://sprinksnap.com/#organization" },
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/PreOrder",
+            "price": "0",
+            "priceCurrency": "USD",
+            "description": "Beta waitlist access"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://sprinksnap.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is SprinkSnap?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "SprinkSnap is a fire protection sprinkler design automation platform for Autodesk Revit, built for layout automation, NFPA 13 workflows, hydraulic calculations, and material takeoffs."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Who is SprinkSnap for?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "SprinkSnap is built for fire protection engineers, sprinkler designers, contractors, and consultants."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does SprinkSnap support NFPA 13?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. SprinkSnap is built around NFPA 13 compliant design workflows for layout, hydraulic analysis, pipe sizing, and documentation."
+              }
+            }
+          ]
+        }
+      ]
     }
   </script>
 </head>
@@ -1060,7 +1162,7 @@
         <a href="#features">Features</a>
         <a href="#faq">FAQ</a>
       </div>
-      <a class="header-cta" href="#waitlist">Join Beta</a>
+      <a class="header-cta" href="#waitlist">Get Early Access</a>
     </nav>
   </header>
 
@@ -1083,23 +1185,28 @@
             confidence.
           </p>
           <div class="hero-actions">
-            <a class="button" href="#waitlist">Join the Beta Waitlist</a>
-            <a class="secondary-link" href="#workflow">See how it works</a>
+            <a class="button" href="#waitlist">Reserve Beta Access</a>
+            <a class="secondary-link" href="#workflow">View the Workflow</a>
           </div>
           <ul class="hero-proof" aria-label="SprinkSnap product focus">
-            <li>Autodesk Revit focused</li>
-            <li>NFPA 13 workflows</li>
-            <li>Hydraulic optimization</li>
-            <li>Stock listing automation</li>
+            <li>Built for Revit production</li>
+            <li>NFPA 13 design workflows</li>
+            <li>Hydraulic pipe sizing</li>
+            <li>Material and stock lists</li>
           </ul>
+          <div class="trust-bar" aria-label="SprinkSnap credibility signals">
+            <div class="trust-item"><strong>NFPA 13</strong><span>Code-driven workflow focus</span></div>
+            <div class="trust-item"><strong>Revit</strong><span>Built for model-based design</span></div>
+            <div class="trust-item"><strong>Beta</strong><span>Early access invitations opening</span></div>
+          </div>
           <div class="contact-strip" aria-label="SprinkSnap contact links">
             <a href="mailto:info@sprinksnap.com">Email info@sprinksnap.com</a>
           </div>
         </div>
 
         <aside class="waitlist-card" id="waitlist" aria-labelledby="waitlist-title">
-          <h2 id="waitlist-title">Join the SprinkSnap beta waitlist</h2>
-          <p>Be the first to know when SprinkSnap launches and get early access updates for your team.</p>
+          <h2 id="waitlist-title">Get early access to SprinkSnap</h2>
+          <p>Join the priority beta list for launch updates, product previews, and early access invitations.</p>
           <form class="waitlist-form" action="mailto:info@sprinksnap.com" method="post" enctype="text/plain">
             <div class="form-row">
               <label for="email">Work email</label>
@@ -1115,7 +1222,8 @@
                 <option>Other</option>
               </select>
             </div>
-            <button class="button" type="submit">Request Beta Access</button>
+            <button class="button" type="submit">Reserve My Beta Spot</button>
+            <p class="conversion-note">No spam. No sales pressure. Just launch updates and beta access information for fire protection teams.</p>
             <p class="form-note">This opens a prefilled email to info@sprinksnap.com and copies the work email entered above.</p>
           </form>
         </aside>
@@ -1126,8 +1234,8 @@
       <div class="container">
         <div class="section-heading">
           <div class="section-label">Key benefits</div>
-          <h2 id="benefits-title">Built for real fire protection design workflows</h2>
-          <p>SprinkSnap is being developed for engineers, designers, contractors, and consultants who need faster production without sacrificing consistency or code confidence.</p>
+          <h2 id="benefits-title">Why fire protection teams choose SprinkSnap</h2>
+          <p>SprinkSnap is built for engineers, designers, contractors, and consultants who need faster production, repeatable standards, and stronger code confidence in Revit.</p>
         </div>
         <div class="benefits">
           <article class="card">
@@ -1197,7 +1305,7 @@
         <div class="section-heading">
           <div class="section-label">How it works</div>
           <h2 id="workflow-title">From layout to hydraulics. Automated.</h2>
-          <p>SprinkSnap is designed to guide the designer through a professional engineering workflow from project setup to coordinated documentation.</p>
+          <p>SprinkSnap guides fire protection teams through a professional engineering workflow from project setup to coordinated documentation.</p>
         </div>
         <div class="workflow">
           <article class="step-card">
@@ -1225,7 +1333,7 @@
         <div class="product-preview">
           <div class="preview-copy">
             <h3>Professional tools for code-driven sprinkler design</h3>
-            <p>SprinkSnap is positioned as serious engineering software: practical automation for teams that need speed, repeatability, and confidence on every project.</p>
+            <p>SprinkSnap gives fire protection teams practical automation for faster design decisions, repeatable outputs, and more confident project delivery.</p>
             <ul class="preview-list">
               <li>AI-assisted routing and automatic pipe sizing</li>
               <li>Hydraulic calculations and demand-based optimization</li>
@@ -1242,7 +1350,7 @@
         <div class="section-heading">
           <div class="section-label">Coming features</div>
           <h2 id="features-title">Automation where sprinkler designers lose the most time</h2>
-          <p>The beta roadmap focuses on high-value production tasks that directly affect design time, coordination quality, and documentation accuracy.</p>
+          <p>The beta roadmap focuses on high-value production tasks that directly affect design time, coordination quality, stock listing accuracy, and hydraulic confidence.</p>
         </div>
         <div class="features-grid">
           <article class="card"><h3>AI-assisted routing</h3><p>Explore routing suggestions that respond to model constraints and design intent.</p></article>
@@ -1260,8 +1368,8 @@
         <div class="signup-panel">
           <div>
             <div class="section-label">Beta access</div>
-            <h2 id="signup-title">Be the first to know when SprinkSnap launches.</h2>
-            <p>Join the waitlist for launch updates, beta invitations, and product announcements for fire protection design teams.</p>
+            <h2 id="signup-title">Join the beta list before launch.</h2>
+            <p>Reserve your place for SprinkSnap launch updates, beta invitations, and product announcements for fire protection design teams.</p>
           </div>
           <form class="waitlist-form" action="mailto:info@sprinksnap.com" method="post" enctype="text/plain">
             <div class="form-row">
@@ -1272,7 +1380,7 @@
               <label for="company">Company</label>
               <input id="company" name="company" type="text" autocomplete="organization" placeholder="Company name">
             </div>
-            <button class="button" type="submit">Join the Beta Waitlist</button>
+            <button class="button" type="submit">Reserve Beta Access</button>
             <p class="form-note">This opens a prefilled email to info@sprinksnap.com and copies your email.</p>
           </form>
         </div>
@@ -1288,7 +1396,7 @@
         <div class="faq-grid">
           <details>
             <summary>What is SprinkSnap?</summary>
-            <p>SprinkSnap is a coming-soon fire protection sprinkler design automation platform for Autodesk Revit.</p>
+            <p>SprinkSnap is a fire protection sprinkler design automation platform for Autodesk Revit, built for layout automation, NFPA 13 workflows, hydraulic calculations, and material takeoffs.</p>
           </details>
           <details>
             <summary>Who is SprinkSnap for?</summary>
@@ -1296,7 +1404,7 @@
           </details>
           <details>
             <summary>Does SprinkSnap support NFPA 13?</summary>
-            <p>SprinkSnap is being developed around NFPA 13 compliant design workflows for layout, hydraulic analysis, and documentation.</p>
+            <p>Yes. SprinkSnap is built around NFPA 13 compliant design workflows for layout, hydraulic analysis, pipe sizing, and documentation.</p>
           </details>
           <details>
             <summary>Will it generate stock lists and material takeoffs?</summary>
@@ -1308,7 +1416,7 @@
           </details>
           <details>
             <summary>Is SprinkSnap formerly FireAcad Inc.?</summary>
-            <p>Yes. SprinkSnap Inc. is presented as formerly FireAcad Inc. on this coming-soon landing page.</p>
+            <p>Yes. SprinkSnap Inc. was formerly FireAcad Inc., with the product now focused on Revit-based fire sprinkler design automation.</p>
           </details>
         </div>
       </div>
