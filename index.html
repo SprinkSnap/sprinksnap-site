@@ -1209,6 +1209,7 @@
           <p>Join the priority beta list for launch updates, product previews, and early access invitations.</p>
           <form class="waitlist-form" action="https://formspree.io/f/mwvjbqzj" method="POST">
             <input type="hidden" name="_subject" value="New SprinkSnap beta waitlist request">
+            <input type="hidden" name="_replyto" value="">
             <input type="hidden" name="source" value="Hero beta waitlist form">
             <div class="form-row">
               <label for="email">Work email</label>
@@ -1375,6 +1376,7 @@
           </div>
           <form class="waitlist-form" action="https://formspree.io/f/mwvjbqzj" method="POST">
             <input type="hidden" name="_subject" value="New SprinkSnap beta waitlist request">
+            <input type="hidden" name="_replyto" value="">
             <input type="hidden" name="source" value="Lower beta access form">
             <div class="form-row">
               <label for="signup-email">Work email</label>
@@ -1451,5 +1453,17 @@
       <path d="M12 5 5 12m7-7 7 7M12 5v14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   </a>
+  <script>
+    document.querySelectorAll(".waitlist-form").forEach(function (form) {
+      form.addEventListener("submit", function () {
+        var email = form.querySelector('input[type="email"]');
+        var replyTo = form.querySelector('input[name="_replyto"]');
+
+        if (email && replyTo) {
+          replyTo.value = email.value;
+        }
+      });
+    });
+  </script>
 </body>
 </html>
