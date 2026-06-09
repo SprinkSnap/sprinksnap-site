@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SprinkSnap Privacy Policy. Learn how SprinkSnap Inc. collects, uses, and protects beta waitlist information for its Revit fire sprinkler design automation platform.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sprinksnap.com/privacy.html">
+  <meta name="theme-color" content="#001A3D">
+  <meta property="og:title" content="Privacy Policy | SprinkSnap">
+  <meta property="og:description" content="Learn how SprinkSnap handles beta waitlist submissions, contact information, analytics, and privacy requests.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sprinksnap.com/privacy.html">
+  <meta property="og:image" content="https://sprinksnap.com/sprinksnap-logo-transparent.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Privacy Policy | SprinkSnap">
+  <meta name="twitter:description" content="SprinkSnap privacy information for beta waitlist visitors and fire protection professionals.">
+  <meta name="twitter:image" content="https://sprinksnap.com/sprinksnap-logo-transparent.png">
+  <title>Privacy Policy | SprinkSnap</title>
+  <style>
+    :root {
+      --navy: #001a3d;
+      --navy-900: #061426;
+      --blue: #005bff;
+      --blue-700: #0057e8;
+      --blue-100: #eaf2ff;
+      --slate: #475569;
+      --line: #dbe5f1;
+      --white: #ffffff;
+      --shadow: 0 24px 70px rgba(11, 31, 58, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      margin: 0;
+      color: var(--navy);
+      background:
+        radial-gradient(circle at 86% 8%, rgba(0, 91, 255, 0.12), transparent 24rem),
+        linear-gradient(180deg, #ffffff 0%, #f8fbff 58%, #ffffff 100%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: var(--blue);
+      font-weight: 800;
+    }
+
+    :focus-visible {
+      outline: 3px solid rgba(0, 91, 255, 0.48);
+      outline-offset: 3px;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(219, 229, 241, 0.86);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(18px);
+    }
+
+    .container {
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      display: flex;
+      min-height: 76px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .brand img {
+      display: block;
+      width: auto;
+      max-width: min(250px, 52vw);
+      height: 54px;
+      object-fit: contain;
+    }
+
+    .nav-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+
+    .button,
+    .secondary-button {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 0 18px;
+      font-weight: 950;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .button {
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--blue), var(--blue-700));
+      box-shadow: 0 16px 34px rgba(0, 91, 255, 0.24);
+    }
+
+    .secondary-button {
+      border: 1px solid var(--line);
+      color: var(--navy);
+      background: #ffffff;
+    }
+
+    .hero {
+      padding: clamp(48px, 8vw, 92px) 0 28px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      border: 1px solid #cfe0ff;
+      border-radius: 999px;
+      padding: 8px 13px;
+      color: var(--blue);
+      background: #ffffff;
+      box-shadow: 0 10px 28px rgba(11, 31, 58, 0.06);
+      font-size: 0.82rem;
+      font-weight: 950;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 860px;
+      margin: 18px 0 0;
+      color: var(--navy);
+      font-size: clamp(2.55rem, 6vw, 5rem);
+      line-height: 0.98;
+      letter-spacing: -0.062em;
+    }
+
+    .lead {
+      max-width: 760px;
+      margin: 22px 0 0;
+      color: var(--slate);
+      font-size: clamp(1.05rem, 1.7vw, 1.22rem);
+    }
+
+    .policy-shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 280px;
+      gap: clamp(26px, 5vw, 56px);
+      align-items: start;
+      padding: 28px 0 clamp(64px, 8vw, 108px);
+    }
+
+    .policy-card {
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      padding: clamp(24px, 5vw, 48px);
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: var(--shadow);
+    }
+
+    .policy-card h2 {
+      margin: 36px 0 10px;
+      color: var(--navy);
+      font-size: clamp(1.35rem, 2vw, 1.85rem);
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+    }
+
+    .policy-card h2:first-child {
+      margin-top: 0;
+    }
+
+    .policy-card p,
+    .policy-card li {
+      color: var(--slate);
+    }
+
+    .policy-card ul {
+      margin: 12px 0 0;
+      padding-left: 1.2rem;
+    }
+
+    .trust-box {
+      position: sticky;
+      top: 100px;
+      border: 1px solid #cfe0ff;
+      border-radius: 24px;
+      padding: 22px;
+      background: #ffffff;
+      box-shadow: 0 14px 42px rgba(11, 31, 58, 0.08);
+    }
+
+    .trust-box h2 {
+      margin: 0;
+      color: var(--navy);
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+    }
+
+    .trust-list {
+      display: grid;
+      gap: 12px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .trust-list li {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 10px;
+      color: var(--slate);
+      font-size: 0.92rem;
+    }
+
+    .check {
+      display: grid;
+      width: 28px;
+      height: 28px;
+      place-items: center;
+      border-radius: 999px;
+      color: var(--blue);
+      background: var(--blue-100);
+      font-weight: 950;
+    }
+
+    .contact-card {
+      margin-top: 18px;
+      border-radius: 18px;
+      padding: 16px;
+      color: var(--navy);
+      background: #f8fbff;
+      font-size: 0.92rem;
+    }
+
+    .site-footer {
+      color: #cbd5e1;
+      background: var(--navy-900);
+    }
+
+    .footer-grid {
+      display: flex;
+      min-height: 96px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 20px 0;
+    }
+
+    .site-footer a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: flex-end;
+    }
+
+    @media (max-width: 820px) {
+      .policy-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-box {
+        position: static;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(100% - 28px, 1080px);
+      }
+
+      .nav {
+        min-height: auto;
+        padding: 16px 0;
+      }
+
+      .brand img {
+        height: 44px;
+      }
+
+      .nav-actions {
+        display: none;
+      }
+
+      .footer-grid {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-links {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PrivacyPolicy",
+      "name": "SprinkSnap Privacy Policy",
+      "url": "https://sprinksnap.com/privacy.html",
+      "dateModified": "2026-06-09",
+      "publisher": {
+        "@type": "Organization",
+        "name": "SprinkSnap Inc.",
+        "email": "info@sprinksnap.com",
+        "url": "https://sprinksnap.com/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/" aria-label="SprinkSnap home">
+        <img src="sprinksnap-logo-transparent.png" alt="SprinkSnap - Smarter Design. Code Confident.">
+      </a>
+      <div class="nav-actions">
+        <a class="secondary-button" href="/">Home</a>
+        <a class="button" href="/#waitlist">Join Beta</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">Privacy Policy</div>
+        <h1>Privacy built for professional beta signups.</h1>
+        <p class="lead">
+          SprinkSnap collects only the information needed to manage beta interest,
+          communicate product updates, and learn which Revit fire sprinkler design
+          workflows matter most to fire protection professionals.
+        </p>
+      </div>
+    </section>
+
+    <section class="container policy-shell" aria-label="SprinkSnap privacy policy">
+      <article class="policy-card">
+        <h2>Overview</h2>
+        <p>
+          This Privacy Policy explains how SprinkSnap Inc. collects, uses, stores,
+          and protects information submitted through sprinksnap.com. SprinkSnap Inc.
+          was formerly FireAcad Inc. and is building a Revit fire sprinkler design
+          automation platform for NFPA 13 workflows, hydraulic calculations, pipe
+          sizing, material takeoffs, and stock listings.
+        </p>
+
+        <h2>Information we collect</h2>
+        <p>When you submit a beta waitlist form, we may collect:</p>
+        <ul>
+          <li>Your work email address.</li>
+          <li>Your role, such as fire protection engineer, sprinkler designer, contractor, consultant, or other.</li>
+          <li>Your company name if you provide it.</li>
+          <li>Basic technical information needed to process the form, such as submission date, source form, browser, and anti-spam signals.</li>
+        </ul>
+
+        <h2>How we use your information</h2>
+        <p>We use submitted information to:</p>
+        <ul>
+          <li>Manage the SprinkSnap beta waitlist.</li>
+          <li>Send launch updates, beta access information, and product announcements.</li>
+          <li>Understand demand from fire protection engineers, designers, contractors, and consultants.</li>
+          <li>Improve the product roadmap for Revit, NFPA 13, hydraulic calculation, and material takeoff workflows.</li>
+          <li>Respond to direct questions or requests.</li>
+        </ul>
+
+        <h2>Formspree form processing</h2>
+        <p>
+          SprinkSnap uses Formspree to process beta waitlist submissions. When you
+          submit a form, your information is sent to Formspree so it can securely
+          capture the request and forward it to SprinkSnap. Formspree may process
+          limited technical information to provide spam protection, form delivery,
+          and submission management.
+        </p>
+
+        <h2>Analytics</h2>
+        <p>
+          SprinkSnap may use privacy-conscious website analytics, such as Cloudflare
+          Web Analytics, to understand aggregate site usage. This helps us understand
+          page visits, referral sources, and conversion activity such as visits to
+          the success page after a beta form submission.
+        </p>
+
+        <h2>How we share information</h2>
+        <p>
+          We do not sell personal information. We may share information only with
+          service providers that help operate the website, process forms, manage
+          email communications, protect against spam, or maintain business records.
+        </p>
+
+        <h2>Data retention</h2>
+        <p>
+          We keep beta waitlist information for as long as needed to manage beta
+          interest, communicate product updates, evaluate product demand, and meet
+          reasonable business or legal requirements. You may request removal at any
+          time by emailing us.
+        </p>
+
+        <h2>Your choices</h2>
+        <p>You may contact SprinkSnap to:</p>
+        <ul>
+          <li>Ask what information we have about you.</li>
+          <li>Correct your email, company, or role information.</li>
+          <li>Request removal from the beta waitlist.</li>
+          <li>Stop receiving launch or product update emails.</li>
+        </ul>
+
+        <h2>Security</h2>
+        <p>
+          We use reasonable safeguards and reputable service providers to protect
+          submitted information. No internet transmission or storage system is
+          guaranteed to be perfectly secure, but we aim to keep collected data
+          limited, relevant, and protected.
+        </p>
+
+        <h2>Children's privacy</h2>
+        <p>
+          SprinkSnap is intended for professional and business use. It is not
+          directed to children, and we do not knowingly collect information from
+          children.
+        </p>
+
+        <h2>Changes to this policy</h2>
+        <p>
+          We may update this Privacy Policy as SprinkSnap develops, as the website
+          changes, or as our form and analytics providers change. The latest version
+          will be posted on this page.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          For privacy questions or requests, contact SprinkSnap at
+          <a href="mailto:info@sprinksnap.com">info@sprinksnap.com</a>.
+        </p>
+      </article>
+
+      <aside class="trust-box" aria-label="Privacy commitments">
+        <h2>Privacy commitments</h2>
+        <ul class="trust-list">
+          <li><span class="check">1</span><span>We collect only practical beta waitlist information.</span></li>
+          <li><span class="check">2</span><span>We do not sell personal information.</span></li>
+          <li><span class="check">3</span><span>You can request removal from the beta list.</span></li>
+          <li><span class="check">4</span><span>Form submissions are processed through Formspree.</span></li>
+        </ul>
+        <div class="contact-card">
+          <strong>Need help?</strong><br>
+          Email <a href="mailto:info@sprinksnap.com">info@sprinksnap.com</a>.
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <span>&copy; 2026 SprinkSnap Inc. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/#waitlist">Beta Waitlist</a>
+        <a href="mailto:info@sprinksnap.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
