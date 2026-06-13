@@ -15,6 +15,12 @@
       "purpose": "any"
     },
     {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
       "src": "/assets/sprinksnap-app-icon.png",
       "sizes": "1024x1024",
       "type": "image/png",
